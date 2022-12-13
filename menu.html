@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Cafe SEL</title>
+		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200&display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
 		$(document).ready(function(){
@@ -25,7 +26,7 @@
 		</script>
 		<style>
 		* {margin:0; padding:0; box-sizing:border-box;}
-		html, body{font:16pt/120% "나눔스퀘어", sans-serif; color:white; background:#0e0e0e;}
+		html, body{font:16pt/120% 'Nanum Gothic', sans-serif; color:white; background:#0e0e0e;}
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
@@ -39,7 +40,7 @@
 		header img{width:110px;}
 		header+img {}
 
-		nav{flex:1.3; display:flex; font-family:"Consolas", serif;  padding:0 10px; text-shadow:1px 1px 2px rgba(0,0,0,0.4); border:0px solid yellow;}
+		nav{flex:1.3; display:flex; font-family:'Roboto Mono', monospace;  padding:0 10px; text-shadow:1px 1px 2px rgba(0,0,0,0.4); border:0px solid yellow;}
 		nav>a{margin:80px 40px 30px 100px; padding-bottom:5px;  }
 		nav>a:nth-child(2){border-bottom:1px solid white;}
 		
@@ -49,28 +50,30 @@
 		/*main p{text-shadow:1px 1px 2px rgba(0,0,0,0.4);}*/
 		
 		#tap p{top:720px; left:400px; background:url("images/menu_tap.png"); z-index:1; position:absolute; width:900px; padding:10px;}
-		#tap a{font-family:"Consolas", serif; color:black; padding:2px 60px; font-weight:bold; }
-		#tap a:nth-of-type(2){margin-left:58px;}
-		#tap a:nth-of-type(3){margin-left:85px;}
+		#tap a{font-family:'Roboto Mono', monospace; color:black; padding:2px 50px; font-weight:bold; }
+		#tap a:nth-of-type(2){margin-left:60px;}
+		#tap a:nth-of-type(3){margin-left:90px;}
 		
 		#menu{display:flex; margin-top:150px;}
 		#m1{flex:0.1;  color:white; background:#0e0e0e;}
 		#m1>section{padding:40px 30px 10px 30px; line-height:180%;}
-		#m1>section:nth-child(2){margin-top:830px;}
+		#m1>section:nth-child(2){margin-top:880px;}
 		#m1>section:nth-child(3){margin-top:2010px;}
 		
-		#m2{flex:1.2;  background:white; color:black; font-weight:bold; padding:50px 80px 100px 0; font-family:"Consolas", serif; line-height:130%; }
+		#m2{flex:1.2;  background:white; color:black; font-weight:bold; padding:50px 80px 100px 0; font-family:'Roboto Mono', monospace; line-height:130%; }
 		#coffee{display:flex; }
 		#m2_1{flex:1; padding-left:80px; border:0px solid red;}
 		#m2_1 section{margin-bottom:70px;}
 		#m2_1 p{font-weight:normal;}
+		#m2_1 h3{padding-bottom:15px;}
 		#m2_2{flex:0.8; padding-top:180px;}
+		
 		.coffee{width:300px;}
 		
 		#bread{font-family:"나눔고딕"}
 		#bread section{display:flex; align-items:center; padding:20px 90px;}
 		#bread input{margin-right:40px;}
-		#bread img{margin-right:100px;}
+		#bread img{margin-right:100px; box-shadow:4px 4px 5px rgba(0,0,0,0.5);}
 		#bread h5 {letter-spacing:0.05em;}
 		
 		#preorder{padding:60px 20px 0 70px;}
