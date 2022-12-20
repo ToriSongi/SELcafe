@@ -18,8 +18,41 @@
 			i--;}
 			}
 			
+			$("#notice").on("mouseenter click", function(){
+				$('#notice section').hide(500);
+				$('.black').stop().animate({left:"260px"},600);
+				$('#notice a').show(500);
+			});
+			$("#notice").mouseleave(function(){
+				$('#notice section').show();
+				$('.black').stop().animate({left:"200vw"},400);
+				$('#notice a').hide();
+			});
 			
-	
+			$("#review").on("mouseenter click", function(){
+				$('#review section').hide(500);
+				$('.black1').stop().animate({left:"260px"},600);
+				$('#review a').show(500);
+			});
+			$("#review").mouseleave(function(){
+				$('#review section').show();
+				$('.black1').stop().animate({left:"200vw"},400);
+				$('#review a').hide();
+			});
+			
+			 const mm=$("#menu section").index();
+			$("#menu section").on("mouseenter click", function(){
+				$(this).eq(mm).children("div").stop().fadeIn(300);
+				$(this).sibling().children("div").fadeOut();
+			});
+			
+			$("#menu section").mouseleave(function(){
+				$("#menu section div").fadeOut();
+			});
+			
+			
+			
+			
 			
 			
 			});///////end
@@ -30,7 +63,7 @@
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
-		#layout{width:1300px; margin:auto; position:relative;}
+		#layout{width:1300px; margin:auto; position:relative; overflow:hidden;}
 		
 		#back {}
 		#back img{position:absolute; top:0; left:0;}
@@ -41,18 +74,57 @@
 		nav{display:flex; font-family:'Roboto Mono', monospace;   padding-left:120px; text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
 		nav>a{padding:20px; margin:80px 80px 50px 0;}
 		
-		main{position:absolute; z-index:2; top:730px; font-size:12pt;}
+		main{position:absolute; top:930px; font-size:16pt; left:580px;  font-family:'Roboto Mono', monospace; text-align:right;}
 		main p{text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
 		
-		#blank {height:940px; }
+		.blank {height:1140px; }
 		
+		aside{position:relative; }
+		aside>p {padding-left:80px; font-family:'Roboto Mono', monospace; }
+		aside>i{margin-right:50px; font-family:'Roboto Mono', monospace; float:left; font-size:0.8rem; animation:toRight 7s infinite ease;}
+		@keyframes toRight{
+			from{transform:translateX(10px);}
+			to{transform:translateX(1100px);}
+		}
+		#rv{margin:400px 0;}
+		#notice{ transition:0.5s;}
+		#notice:hover{transform:translate(-50px, -30px) scale(1.2);}
+		#notice img{position:absolute; top:0; }	
+		#notice img:not(:last-of-type){width:80%; right:0;}
+		.black{left:200vw; opacity:0.7;}
+		.inlogo{margin-top:80px; left:360px;}	
+		#notice section{position:absolute; left:620px; top:80px; line-height:200%; color:black; font-weight:bold; background:rgba(255,255,255,0.6); padding:10px 25px; width:460px;}
+		#notice a{position:absolute; color:white; left:620px; top:120px; display:none; line-height:180%; font-size:0.7rem;}
 		
+		#review{transition:0.5s;}
+		#review:hover{transform:translate(-50px, -80px) scale(1.2);}
+		#review section{position:absolute; left:620px; top:480px; line-height:200%; color:black; font-weight:bold; background:rgba(255,255,255,0.6); padding:10px 45px; width:460px;}
+		#review span{font-size:0.6rem; color:white; padding:7px; background:black; border-radius:5px;}
+		#review img{position:absolute; top:400px; }	
+		#review img:not(:last-of-type){width:80%; right:0;}
+		.black1{left:200vw; opacity:0.7;}
+		#review a{position:absolute; color:white; left:620px; top:520px;  line-height:180%; display:none; font-size:0.7rem;}
 		
-		footer{display:flex; font-size:0.6rem; align-items:center; padding:0px 70px 30px 180px;}
+		#menu{transition:0.5s; display:flex; margin-top:40px;}
+		#menu section{/*position:absolute; top:900px;*/ line-height:200%; color:black; font-weight:bold;  padding:10px 30px; width:300px; transition:0.5s; }
+		#menu section div{display:none; transition:0.5s;}
+		#m1 { margin:10px 0px; position:relative; }
+		#m1 h4{position:absolute; /*background:rgba(255,255,255,0.2);*/ top:50px; left:30px; padding: 5px 20px 5px 40px; font-size:0.8rem; color:white; font-weight:normal;}
+		
+		#m2 { margin:10px 0 10px 20px; position:relative; }
+		#m2 h4{position:absolute; /*background:rgba(255,255,255,0.2);*/ top:50px; left:30px; padding: 5px 20px 5px 40px; font-size:0.8rem; color:white; font-weight:normal;}
+		#m3 { margin:10px 0 10px 20px; position:relative; }
+		#m3 h4{position:absolute; /*background:rgba(255,255,255,0.2);*/ top:50px; left:30px; padding: 5px 20px 5px 40px; font-size:0.8rem; color:white; font-weight:normal;}
+		#m4 { margin:10px 0 10px 30px; position:relative; }
+		#m4 h4{position:absolute; /*background:rgba(255,255,255,0.2);*/ top:50px; left:30px; padding: 5px 20px 5px 40px; font-size:0.8rem; color:white; font-weight:normal;}
+		#menu section img{position:absolute; border-radius:5px;}	
+		#menu>a {font-family:'Roboto Mono', monospace; margin-left:1200px; margin-top:250px; position:absolute; font-size:0.8rem;}
+		
+		footer{display:flex; font-size:0.6rem; align-items:center; padding:50px 70px 30px 180px; border-top:1px solid rgba(255,255,255,0.3); margin-top:340px;}
 		footer img{padding:15px; width:90px;}
 		footer a{margin:0 20px;}
 		footer a:hover{font-weight:bold;}
-		p{margin-left:90px; flex:1; line-height:30pt;}
+		footer>p{margin-left:90px; flex:1; line-height:30pt;}
 		
 		
 		
@@ -79,9 +151,78 @@
 			</header>
 			<main>
 				<p>21-7, Wiryeseoil-ro 1-gil, Sung-nam.</p>
-				<p>Mon ~ Sat   8 : 00 am - 8 : 00 pm (last order 7 : 30 pm)</p>
+				<p>Mon - Sat  &ensp; 8 : 00 am - 8 : 00 pm (last order 7 : 30 pm)</p>
 			</main>
-			<div id="blank"></div>
+			<div class="blank">
+		
+			</div>
+			<aside>
+		
+				<div id="notice">
+					<img src="images/main_notice.png" alt="공지사항배경">
+					<img src="images/main_black.png" alt="블랙배경" class="black">
+					<img src="images/sel_logo_black2.png" alt="로고블랙" class="inlogo">
+					<section>
+						<h3>공지사항</h3>
+						<span>2022.12.01</span><p> Cafe Sel 12월 일정안내</p>
+						
+					</section>
+					<a href="notice_221201.html">12월 셀카페 일정입니다.<br>
+							방문하시기 전에 참고 부탁드려요 &ensp; &ensp; +더보기</a>
+				</div>	
+				
+				<div id="review">
+					<img src="images/main_review.png" alt="리뷰배경">
+					<img src="images/main_black.png" alt="블랙배경" class="black1">
+					<img src="images/sel_logo_black2.png" alt="로고블랙" class="inlogo">
+					<section>
+						<span>new! </span><h3>고객 리뷰</h3>
+						 <p>2022.11.10</p>
+					</section>
+					<a href="review.html"><b>아벨라시칠리아님</b><br>
+							깔끔한 분위기 좋아요! 크리스마스 분위기도 좋고.... &ensp; &ensp; +더보기</a>
+				</div>
+				
+			
+				
+				
+				<p>Notice.</p>
+				<p id="rv">Review.</p>
+				<p>Menu.</p>
+				<i>Most popular menu!!</i>
+				<div id="menu">
+					<section id="m1">
+						<img src="images/main_menu1.jpg" alt="메뉴1">
+						<div>
+							<img src="images/main_black2.png" alt="블랙배경" class="black2">
+							<h4>브리오슈 소금빵</h4>
+						</div>
+					</section >
+					<section id="m2">
+						<img src="images/main_menu2.jpg" alt="메뉴2">
+						<div>
+							<img src="images/main_black2.png" alt="블랙배경" class="black3">
+							<h4>브리오슈 먹물 소금빵</h4>
+						</div>
+					</section>
+					<section id="m3">
+						<img src="images/main_menu3.jpg" alt="메뉴3">
+						<div>
+							<img src="images/main_black2.png" alt="블랙배경" class="black4">
+							<h4>올리브 치아바타</h4>
+						</div>	
+					</section >
+					<section id="m4">
+						<img src="images/main_menu4.jpg" alt="메뉴4">
+						<div>
+							<img src="images/main_black2.png" alt="블랙배경" class="black5">
+							<h4>치즈 깜빠뉴</h4>
+						</div>
+					</section>
+					<a href="menu.html"> + more </a>
+				</div>
+			</aside>
+				
 			<footer>
 				<img src="images/sel_logo.png" alt="로고화이트">
 				<p>COPYRIGHT ⓒSEL. ALL RIGHTS Reserved. <a href="#">개인정보취급방침  </a>  대표  이재현 <a href="#">Contact Us</a> <br>
