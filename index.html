@@ -19,35 +19,35 @@
 			}
 			
 			$("#notice").on("mouseenter click", function(){
-				$('#notice section').hide(500);
-				$('.black').stop().animate({left:"260px"},600);
-				$('#notice a').show(500);
+				$('#notice section').hide();
+				$('.black').stop().animate({left:"260px"},);
+				$('#notice a').show();
 			});
 			$("#notice").mouseleave(function(){
 				$('#notice section').show();
-				$('.black').stop().animate({left:"2600px"},400);
+				$('.black').stop().animate({left:"2600px"},);
 				$('#notice a').hide();
 			});
 			
 			$("#review").on("mouseenter click", function(){
-				$('#review section').hide(500);
-				$('.black1').stop().animate({left:"260px"},600);
-				$('#review a').show(500);
+				$('#review section').hide();
+				$('.black1').stop().animate({left:"260px"},);
+				$('#review a').show();
 			});
 			$("#review").mouseleave(function(){
 				$('#review section').show();
-				$('.black1').stop().animate({left:"2600px"},400);
+				$('.black1').stop().animate({left:"2600px"}, );
 				$('#review a').hide();
 			});
 			
 			 const mm=$("#menu section").index();
-			$("#menu section").on("mouseenter click", function(){
-				$(this).eq(mm).children("div").stop().fadeIn(300);
-				$(this).sibling().children("div").fadeOut();
+				$("#menu section").on("mouseenter click", function(){
+				$(this).eq(mm).children("div").stop().show( );
+				$(this).sibling().children("div").hide();
 			});
 			
 			$("#menu section").mouseleave(function(){
-				$("#menu section div").fadeOut();
+				$("#menu section div").hide();
 			});
 			
 			
@@ -68,7 +68,7 @@
 		#back {}
 		#back img{position:absolute; top:0; left:0;}
 		
-		header {display:flex; position:absolute; z-index:1; padding:30px 80px;}
+		header {display:flex; position:absolute; z-index:1; padding:30px 80px; }
 		header h1{flex:1; width:140px; height:140px; border-radius:50%; background:rgba(255,255,255,0.2); padding:21px; text-align:center;}
 		header h1>img {}
 		nav{display:flex; font-family:'Roboto Mono', monospace;   padding-left:120px; text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
@@ -83,8 +83,9 @@
 		aside>p {padding-left:80px; font-family:'Roboto Mono', monospace; }
 		aside>i{margin-right:50px; font-family:'Roboto Mono', monospace; float:left; font-size:0.8rem; animation:toRight 7s infinite ease;}
 		@keyframes toRight{
-			from{transform:translateX(10px);}
-			to{transform:translateX(1100px);}
+			0%{transform:translateX(30px);}
+			50%{transform:translateX(1100px);}
+			100%{transform:translateX(30px);}
 		}
 		#rv{margin:400px 0;}
 		#notice{ transition:0.5s;}
@@ -93,12 +94,13 @@
 		#notice img:not(:last-of-type){width:80%; right:0;}
 		.black{left:2600px; opacity:0.7;}
 		.inlogo{margin-top:80px; left:360px;}	
-		#notice section{position:absolute; left:620px; top:80px; line-height:200%; color:black; font-weight:bold; background:rgba(255,255,255,0.6); padding:10px 25px; width:460px;}
+		#notice section{position:absolute; left:620px; top:80px; line-height:200%; color:black; font-weight:bold; background:rgba(255,255,255,0.6); padding:10px 45px; width:460px;  border-radius:30px 0; }
 		#notice a{position:absolute; color:white; left:620px; top:120px; display:none; line-height:180%; font-size:0.7rem;}
+		#notice span{font-size:0.6rem; color:white; padding:7px; background:black; border-radius:5px;}
 		
 		#review{transition:0.5s;}
 		#review:hover{transform:translate(-50px, -80px) scale(1.2);}
-		#review section{position:absolute; left:620px; top:480px; line-height:200%; color:black; font-weight:bold; background:rgba(255,255,255,0.6); padding:10px 45px; width:460px;}
+		#review section{position:absolute; left:620px; top:480px; line-height:200%; color:black; font-weight:bold; background:rgba(255,255,255,0.6); padding:10px 45px; width:460px;  border-radius:30px 0; }
 		#review span{font-size:0.6rem; color:white; padding:7px; background:black; border-radius:5px;}
 		#review img{position:absolute; top:400px; }	
 		#review img:not(:last-of-type){width:80%; right:0;}
@@ -115,12 +117,12 @@
 		#m2 h4{position:absolute; /*background:rgba(255,255,255,0.2);*/ top:50px; left:30px; padding: 5px 20px 5px 40px; font-size:0.8rem; color:white; font-weight:normal;}
 		#m3 { margin:10px 0 10px 20px; position:relative; }
 		#m3 h4{position:absolute; /*background:rgba(255,255,255,0.2);*/ top:50px; left:30px; padding: 5px 20px 5px 40px; font-size:0.8rem; color:white; font-weight:normal;}
-		#m4 { margin:10px 0 10px 30px; position:relative; }
+		#m4 { margin:10px 0 10px 20px; position:relative; }
 		#m4 h4{position:absolute; /*background:rgba(255,255,255,0.2);*/ top:50px; left:30px; padding: 5px 20px 5px 40px; font-size:0.8rem; color:white; font-weight:normal;}
 		#menu section img{position:absolute; border-radius:5px;}	
 		#menu>a {font-family:'Roboto Mono', monospace; margin-left:1200px; margin-top:250px; position:absolute; font-size:0.8rem;}
 		
-		footer{display:flex; font-size:0.6rem; align-items:center; padding:50px 70px 30px 180px; border-top:1px solid rgba(255,255,255,0.3); margin-top:340px;}
+		footer{display:flex; font-size:0.85rem; align-items:center; padding:50px 70px 30px 150px; border-top:1px solid rgba(255,255,255,0.3); margin-top:340px;}
 		footer img{padding:15px; width:90px;}
 		footer a{margin:0 20px;}
 		footer a:hover{font-weight:bold;}
@@ -163,8 +165,8 @@
 					<img src="images/main_black.png" alt="블랙배경" class="black">
 					<img src="images/sel_logo_black2.png" alt="로고블랙" class="inlogo">
 					<section>
-						<h3>공지사항</h3>
-						<span>2022.12.01</span><p> Cafe Sel 12월 일정안내</p>
+						<span>new! </span><h3>공지사항</h3>
+						<p>2022.12.01 &ensp; Cafe Sel 12월 일정안내</p>
 						
 					</section>
 					<a href="notice_221201.html">12월 셀카페 일정입니다.<br>
@@ -180,7 +182,7 @@
 						 <p>2022.11.10</p>
 					</section>
 					<a href="review.html"><b>아벨라시칠리아님</b><br>
-							깔끔한 분위기 좋아요! 크리스마스 분위기도 좋고.... &ensp; &ensp; +더보기</a>
+							아니 이렇게 이쁘고 맛있을 일 입니까??.... &ensp; &ensp; +더보기</a>
 				</div>
 				
 			
